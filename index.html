@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MoneyMentor Chat</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #181a1b url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #f1f1f1;
+    }
+    .container {
+      background: rgba(35,39,43,0.95);
+      color: #f1f1f1;
+    }
+    .sidebar {
+      background: #202225;
+      color: #f1f1f1;
+      border-right: 1px solid #333;
+    }
+    .sidebar button, .sidebar input {
+      background: #2c2f34;
+      color: #f1f1f1;
+      border: 1px solid #444;
+    }
+    .sidebar input::placeholder {
+      color: #bbb;
+    }
+    .chat-area {
+      background: transparent;
+      color: #f1f1f1;
+    }
+    .chat-box {
+      background: #23272b;
+      color: #f1f1f1;
+    }
+    .chat.user {
+      background: #2c2f34;
+      color: #f1f1f1;
+    }
+    .chat.bot {
+      background: #23272b;
+      color: #f1f1f1;
+    }
+    .chat-input {
+      background: #202225;
+      border-top: 1px solid #333;
+    }
+    .chat-input input {
+      background: #2c2f34;
+      color: #f1f1f1;
+      border: 1px solid #444;
+    }
+    .chat-input input::placeholder {
+      color: #bbb;
+    }
+    .send-btn {
+      background: #2c2f34;
+      color: #f1f1f1;
+      border: 1px solid #444;
+    }
+    .send-btn:hover {
+      background: #357ab8;
+      color: #fff;
+    }
+    a { color: #4ea1f7; }
+    .finance-icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 2px 8px #0008);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <button class="new-chat">+ New Chat</button>
+      <input type="text" class="search-bar" placeholder="Search" />
+      <div class="chat-history">
+        <p>Saving for a Car</p>
+        <p>Building an Emergency Fund</p>
+        <p>Budgeting Tips</p>
+      </div>
+      <button class="logout-btn">Logout</button>
+    </aside>
+
+    <!-- Chat Section -->
+    <main class="chat-area">
+      <div class="header">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Finance Icon" class="finance-icon" />
+        <h1>MoneyMentor</h1>
+        <p>Your Personal Finance Buddy</p>
+      </div>
+
+      <div class="chat-box">
+        <div class="chat user">How can I start investing?</div>
+        <div class="chat bot">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Finance Icon" class="finance-icon" />
+          <p>To start investing, first make sure you have an emergency fund in place and pay off any high-interest debt. Next, determine your investment goals and risk tolerance.</p>
+        </div>
+      </div>
+
+      <!-- Input Section -->
+      <div class="chat-input">
+        <input type="text" placeholder="Message MoneyMentor..." />
+        <button class="send-btn">➤</button>
+      </div>
+    </main>
+  </div>
+  <script src="script/chatbot.js"></script>
+</body>
+</html>
